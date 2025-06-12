@@ -1,2 +1,2 @@
-export { default as AddCinema } from './AddLab';
-export { default as CinemaToolbar } from './LabToolbar';
+export { default as AddLab } from './AddLab';
+export { default as LabToolbar } from './LabToolbar';

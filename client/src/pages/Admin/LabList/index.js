@@ -1,1 +1,1 @@
-export { default } from './CinemaList';
+export { default } from './LabList';
