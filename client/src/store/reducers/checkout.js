@@ -1,6 +1,6 @@
 import {
   SET_SELECTED_SEATS,
-  SET_SELECTED_CINEMA,
+  SET_SELECTED_LAB,
   SET_SELECTED_DATE,
   SET_SELECTED_TIME,
   TOGGLE_LOGIN_POPUP,
@@ -14,7 +14,7 @@ import {
 const initialState = {
   selectedSeats: [],
   suggestedSeat: [],
-  selectedCinema: '',
+  selectedLab: '',
   selectedDate: null,
   selectedTime: '',
   showLoginPopup: false,
@@ -51,9 +51,9 @@ const setSuggestedSeats = (state, seats) => {
   };
 };
 
-const setSelectedCinema = (state, selectedCinema) => ({
+const setSelectedLab = (state, selectedLab) => ({
   ...state,
-  selectedCinema
+  selectedLab
 });
 const setSelectedDate = (state, selectedDate) => ({
   ...state,
@@ -97,8 +97,8 @@ export default function(state = initialState, action) {
       return setSelectedSeats(state, payload);
     case SET_SUGGESTED_SEATS:
       return setSuggestedSeats(state, payload);
-    case SET_SELECTED_CINEMA:
-      return setSelectedCinema(state, payload);
+    case SET_SELECTED_LAB:
+      return setSelectedLab(state, payload);
     case SET_SELECTED_DATE:
       return setSelectedDate(state, payload);
     case SET_SELECTED_TIME:
