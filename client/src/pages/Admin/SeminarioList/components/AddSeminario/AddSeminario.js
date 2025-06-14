@@ -7,9 +7,8 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
-import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@mui/pickers';
-
-import MomentUtils from '@date-io/moment';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import styles from './styles';
 import { seminarCategories, languageData } from '../../../../../data/LabDataService';
 import {
@@ -19,6 +18,7 @@ import {
 } from '../../../../../store/actions';
 import FileUpload from '../../../../../components/FileUpload/FileUpload';
 import { Select } from '@mui/material';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 
 class AddSeminario extends Component {
   state = {
@@ -227,8 +227,8 @@ class AddSeminario extends Component {
             />
           </div>
           <div className={classes.field}>
-            <MuiPickersUtilsProvider utils={MomentUtils}>
-              <KeyboardDatePicker
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DatePicker
                 className={classes.textField}
                 inputVariant="outlined"
                 margin="normal"
@@ -243,7 +243,7 @@ class AddSeminario extends Component {
                 }}
               />
 
-              <KeyboardDatePicker
+              <DatePicker
                 className={classes.textField}
                 inputVariant="outlined"
                 margin="normal"
@@ -255,7 +255,7 @@ class AddSeminario extends Component {
                   'aria-label': 'change date'
                 }}
               />
-            </MuiPickersUtilsProvider>
+            </LocalizationProvider>
           </div>
           <div className={classes.field}>
             <FileUpload

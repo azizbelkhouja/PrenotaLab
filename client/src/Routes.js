@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Loading from './components/Loading';
 import { ProtectedRoute, WithLayoutRoute } from './routers';
@@ -26,111 +26,102 @@ const MyDashboard = lazy(() => import('./pages/Public/MyDashboard'));
 const SeminarioCategoryPage = lazy(() =>
   import('./pages/Public/SeminarioCategoryPage')
 );
-const CinemasPage = lazy(() => import('./pages/Public/CinemasPage'));
+const LabsPage = lazy(() => import('./pages/Public/LabsPage'));
 const BookingPage = lazy(() => import('./pages/Public/BookingPage'));
 
 const Checkin = lazy(() => import('./pages/Public/Checkin'));
 
-const Routes = () => {
+const AppRoutes = () => {
   return (
     <Suspense fallback={<Loading />}>
       <Router>
-        <Switch>
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/register" component={Register} />
+        <Routes>
+          {/* Login and Register */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
 
-          <WithLayoutRoute
-            exact
+          {/* Public routes with layout wrapper */}
+          <Route
             path="/checkin/:reservationId"
-            component={Checkin}
-            layout={PublicLayout}
+            element={
+              <WithLayoutRoute layout={PublicLayout} component={Checkin} />
+            }
+          />
+          <Route
+            path="/"
+            element={<WithLayoutRoute layout={PublicLayout} component={HomePage} />}
+          />
+          <Route
+            path="/mydashboard"
+            element={<WithLayoutRoute layout={PublicLayout} component={MyDashboard} />}
+          />
+          <Route
+            path="/labs"
+            element={<WithLayoutRoute layout={PublicLayout} component={LabsPage} />}
+          />
+          <Route
+            path="/seminario/category/:category"
+            element={
+              <WithLayoutRoute layout={PublicLayout} component={SeminarioCategoryPage} />
+            }
+          />
+          <Route
+            path="/seminario/:id"
+            element={
+              <WithLayoutRoute
+                layout={PublicLayout}
+                layoutProps={{ withFooter: false }}
+                component={SeminarioPage}
+              />
+            }
+          />
+          <Route
+            path="/seminario/booking/:id"
+            element={
+              <WithLayoutRoute
+                layout={PublicLayout}
+                layoutProps={{ withFooter: false }}
+                component={BookingPage}
+              />
+            }
           />
 
-          <WithLayoutRoute
-            exact
-            path="/"
-            layout={PublicLayout}
-            component={HomePage}
-          />
-          <WithLayoutRoute
-            exact
-            path="/mydashboard"
-            layout={PublicLayout}
-            component={MyDashboard}
-          />
-          <WithLayoutRoute
-            exact
-            path="/cinemas"
-            layout={PublicLayout}
-            component={CinemasPage}
-          />
-          <WithLayoutRoute
-            exact
-            path="/seminario/category/:category"
-            layout={PublicLayout}
-            component={SeminarioCategoryPage}
-          />
-          <WithLayoutRoute
-            exact
-            path="/seminario/:id"
-            layout={PublicLayout}
-            layoutProps={{ withFooter: false }}
-            component={SeminarioPage}
-          />
-          <WithLayoutRoute
-            exact
-            path="/seminario/booking/:id"
-            layout={PublicLayout}
-            layoutProps={{ withFooter: false }}
-            component={BookingPage}
-          />
-          <ProtectedRoute
-            exact
+          {/* Protected admin routes */}
+          <Route
             path="/admin/dashboard"
-            layout={AdminLayout}
-            component={DashboardPage}
+            element={<ProtectedRoute layout={AdminLayout} component={DashboardPage} />}
           />
-          <ProtectedRoute
-            exact
+          <Route
             path="/admin/users"
-            layout={AdminLayout}
-            component={User}
+            element={<ProtectedRoute layout={AdminLayout} component={User} />}
           />
-          <ProtectedRoute
-            exact
+          <Route
             path="/admin/showtimes"
-            layout={AdminLayout}
-            component={ShowtimeList}
+            element={<ProtectedRoute layout={AdminLayout} component={ShowtimeList} />}
           />
-          <ProtectedRoute
-            exact
+          <Route
             path="/admin/reservations"
-            layout={AdminLayout}
-            component={ReservationList}
+            element={<ProtectedRoute layout={AdminLayout} component={ReservationList} />}
           />
-          <ProtectedRoute
-            exact
+          <Route
             path="/admin/labs"
-            layout={AdminLayout}
-            component={LabList}
+            element={<ProtectedRoute layout={AdminLayout} component={LabList} />}
           />
-          <ProtectedRoute
-            exact
+          <Route
             path="/admin/seminari"
-            layout={AdminLayout}
-            component={SeminarioList}
+            element={<ProtectedRoute layout={AdminLayout} component={SeminarioList} />}
           />
-          <ProtectedRoute
-            exact
+          <Route
             path="/admin/account"
-            layout={AdminLayout}
-            component={Account}
+            element={<ProtectedRoute layout={AdminLayout} component={Account} />}
           />
-          <Route path="*" component={() => '404 NOT FOUND'} />
-        </Switch>
+
+          {/* 404 fallback */}
+          <Route path="*" element={<div>404 NOT FOUND</div>} />
+        </Routes>
       </Router>
     </Suspense>
   );
 };
 
-export default Routes;
+export default AppRoutes;

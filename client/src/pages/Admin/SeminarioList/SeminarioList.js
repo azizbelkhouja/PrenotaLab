@@ -7,7 +7,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import { SeminarioToolbar, SeminarioCard } from './components';
 import { ResponsiveDialog } from '../../../components';
 import styles from './styles';
-import AddMovie from './components/AddSeminario/AddSeminario';
+import AddSeminario from './components/AddSeminario/AddSeminario';
 import { getSeminari, onSelectSeminario } from '../../../store/actions';
 import { match } from '../../../utils';
 
@@ -59,7 +59,7 @@ class SeminarioList extends Component {
           id="Edit-seminario"
           open={Boolean(selectedSeminario)}
           handleClose={() => this.props.onSelectSeminario(null)}>
-          <AddMovie edit={selectedSeminario} />
+          <AddSeminario edit={selectedSeminario} />
         </ResponsiveDialog>
       </div>
     );

@@ -7,8 +7,8 @@ import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
-import { TheatersIcon } from '@material-ui/icons/Theaters';
-import { ArrowDownwardIcon } from '@material-ui/icons/ArrowDownward';
+import TheatersIcon from '@mui/icons-material/Theaters';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 const useStyles = makeStyles(theme => ({
   root: {

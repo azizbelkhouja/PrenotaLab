@@ -1,7 +1,8 @@
 import React from 'react';
 import { Box, Grid, TextField, MenuItem, Typography } from '@mui/material';
-
-import MomentUtils from '@date-io/moment';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 
 export default function BookingForm(props) {
   const {
@@ -53,8 +54,8 @@ export default function BookingForm(props) {
       </Grid>
       {showtime && (
         <Grid item xs>
-          <MuiPickersUtilsProvider utils={MomentUtils}>
-            <KeyboardDatePicker
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <DatePicker
               inputVariant="outlined"
               margin="none"
               fullWidth
@@ -68,7 +69,7 @@ export default function BookingForm(props) {
                 'aria-label': 'change date'
               }}
             />
-          </MuiPickersUtilsProvider>
+          </LocalizationProvider>
         </Grid>
       )}
       {selectedDate && (

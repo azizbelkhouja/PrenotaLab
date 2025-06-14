@@ -6,7 +6,7 @@ import {
   TotalLabs,
   TotalSeminari,
   TotalReservations,
-  BestLabs,
+  BestSeminari,
   UsersByDevice
 } from './components';
 import {
@@ -77,8 +77,8 @@ class Dashboard extends Component {
             <TotalReservations reservations={reservations.length} />
           </Grid>
           <Grid item lg={8} md={12} xl={9} xs={12}>
-            <BestLabs
-              bestLabs={this.getBestLabs(reservations, labs, 5)}
+            <BestSeminari
+              bestSeminari={this.getBestSeminari(reservations, seminari, 5)}
             />
           </Grid>
           <Grid item lg={4} md={6} xl={3} xs={12}>

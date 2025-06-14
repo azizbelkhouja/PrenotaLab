@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { withStyles } from '@material-ui/core';
+import { withStyles } from '@mui/styles';
 import {
   Table,
   TableBody,
@@ -9,7 +9,7 @@ import {
   TableHead,
   TableRow,
   TablePagination
-} from '@material-ui/core';
+} from '@mui/material';
 
 import { Portlet, PortletContent } from '../../../../../components';
 import styles from './styles';

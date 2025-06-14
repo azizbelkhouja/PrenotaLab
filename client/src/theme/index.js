@@ -1,11 +1,11 @@
 // @ts-nocheck
-import { createMuiTheme } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 // import palette from './palette';
 import paletteDark from './paletteDark';
 import typography from './typography';
 
 // read more at https://material-ui.com/customization/themes
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: paletteDark,
   typography,
   zIndex: {

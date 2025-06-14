@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core';
-import { Button, TextField, Typography } from '@material-ui/core';
+import { withStyles } from '@mui/styles';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
+import Add from '@mui/icons-material/Add';
 import styles from './styles';
-import { Add } from '@material-ui/icons';
 import {
   getLabs,
   createLabs,

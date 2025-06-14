@@ -1,4 +1,4 @@
-export default theme => ({
+const styles = theme => ({
   root: {},
   field: {
     margin: theme.spacing(3)
@@ -15,3 +15,5 @@ export default theme => ({
     paddingBottom: theme.spacing(2)
   }
 });
+
+export default styles;

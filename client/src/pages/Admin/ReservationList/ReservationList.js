@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { withStyles, CircularProgress } from '@material-ui/core';
+import { withStyles } from '@mui/styles';
+import { CircularProgress } from '@mui/material';
 import styles from './styles';
 import { ReservationsToolbar, ReservationsTable } from './components';
 import { getReservations, getSeminari, getLabs } from '../../../store/actions';

@@ -1,4 +1,4 @@
-const useStyles = theme => ({
+const styles = theme => ({
   root: {},
   tableRow: {
     height: '64px'
@@ -26,4 +26,4 @@ const useStyles = theme => ({
   }
 });
 
-export default useStyles;
+export default styles;

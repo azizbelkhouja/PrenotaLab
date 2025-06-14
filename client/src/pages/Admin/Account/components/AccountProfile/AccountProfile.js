@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import moment from 'moment';
-import { withStyles } from '@material-ui/core';
-import { Avatar, Typography, Button } from '@material-ui/core';
+import { withStyles } from '@mui/styles';
+import Avatar from '@mui/material/Avatar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 import {
   Portlet,
   PortletContent,

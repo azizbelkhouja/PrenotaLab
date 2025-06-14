@@ -7,9 +7,9 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
-import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@mui/x-date-pickers';
-import MomentUtils from '@date-io/moment';
-
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import styles from './styles';
 import { addShowtime, updateShowtime } from '../../../../../store/actions';
 
@@ -178,8 +178,8 @@ class AddShowtime extends Component {
           </div>
 
           <div className={classes.field}>
-            <MuiPickersUtilsProvider utils={MomentUtils}>
-              <KeyboardDatePicker
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <DatePicker
                 className={classes.textField}
                 inputVariant="outlined"
                 margin="normal"
@@ -194,7 +194,7 @@ class AddShowtime extends Component {
                 }}
               />
 
-              <KeyboardDatePicker
+              <DatePicker
                 className={classes.textField}
                 inputVariant="outlined"
                 margin="normal"
@@ -208,7 +208,7 @@ class AddShowtime extends Component {
                   'aria-label': 'change date'
                 }}
               />
-            </MuiPickersUtilsProvider>
+            </LocalizationProvider>
           </div>
         </form>
 

@@ -1,16 +1,13 @@
 // @ts-nocheck
 import React, { Component } from 'react';
-import { ThemeProvider } from '@material-ui/core/styles';
-
+import { ThemeProvider } from '@mui/material/styles';
 //Redux
 import { Provider } from 'react-redux';
-
 import theme from './theme';
 import Routes from './Routes';
-
 import './assets/scss/index.scss';
 import 'typeface-montserrat';
-import { CssBaseline } from '@material-ui/core';
+import CssBaseline from '@mui/material/CssBaseline';
 
 class App extends Component {
   

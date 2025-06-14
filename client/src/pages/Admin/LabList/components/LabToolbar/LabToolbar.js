@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { withStyles } from '@material-ui/core';
-import { Button } from '@material-ui/core';
+import { withStyles } from '@mui/styles';
+import Button from '@mui/material/Button';
 import { SearchInput, ResponsiveDialog } from '../../../../../components';
 import styles from './styles';
 import AddLab from '../AddLab/AddLab';
