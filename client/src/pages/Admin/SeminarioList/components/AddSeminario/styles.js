@@ -1,4 +1,4 @@
-export default theme => ({
+const useStyles = theme => ({
   root: {},
   title: { marginLeft: theme.spacing(3) },
   field: {
@@ -27,3 +27,5 @@ export default theme => ({
     marginLeft: theme.spacing(3)
   }
 });
+
+export default useStyles;

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core';
-import { Button, TextField } from '@material-ui/core';
+import { withStyles } from '@mui/styles';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 import {
   Portlet,
   PortletHeader,

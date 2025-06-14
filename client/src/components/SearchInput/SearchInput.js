@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { withStyles } from '@material-ui/core';
-import { Input } from '@material-ui/core';
-import { Search as SearchIcon } from '@material-ui/icons';
+import { withStyles } from '@mui/styles';
+import Input from '@mui/material/Input';
+import SearchIcon from '@mui/icons-material/Search';
 import styles from './styles';
 
 const SearchInput = props => {

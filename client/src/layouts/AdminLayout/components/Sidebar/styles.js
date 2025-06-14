@@ -1,4 +1,4 @@
-export default theme => ({
+const useStyles = theme => ({
   root: {
     backgroundColor: theme.palette.background.paper,
     display: 'flex',
@@ -95,3 +95,5 @@ export default theme => ({
     }
   }
 });
+
+export default useStyles;

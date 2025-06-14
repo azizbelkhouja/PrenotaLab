@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { makeStyles, Grid, Typography, Container } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
+import {
+  Container,
+  Grid,
+  Typography
+} from '@mui/material';
 import { getSeminari, getReservations, getLabs } from '../../../store/actions';
 import { MyReservationTable } from './components';
 import Account from '../../Admin/Account';

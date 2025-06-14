@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { makeStyles, Grid, Typography, Container } from '@material-ui/core';
 import { getLabs } from '../../../store/actions';
-import CinemaCard from '../components/CinemaCard/CinemaCard';
+import LabCard from '../components/LabCard/LabCard';
+import { Container, Grid, Typography } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(theme => ({
   title: {

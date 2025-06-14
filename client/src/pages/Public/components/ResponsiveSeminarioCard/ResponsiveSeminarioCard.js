@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, Paper, Typography } from '@material-ui/core';
+import { withStyles } from '@mui/styles';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
 import styles from './styles';
 // import ShareIcon from '@material-ui/icons/Share';
 // import FavoriteIcon from '@material-ui/icons/Favorite';

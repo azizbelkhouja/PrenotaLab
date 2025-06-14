@@ -1,10 +1,10 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/styles';
-import { Card, CardContent, Grid, Typography, Avatar } from '@material-ui/core';
-import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
-import PeopleIcon from '@material-ui/icons/PeopleOutlined';
+import { Card, CardContent, Grid, Typography, Avatar } from '@mui/material';
+import PeopleIcon from '@mui/icons-material/People';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(theme => ({
   root: {

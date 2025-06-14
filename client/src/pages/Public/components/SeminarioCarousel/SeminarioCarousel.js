@@ -1,11 +1,14 @@
 import React from 'react';
 import classnames from 'classnames';
 import { Link } from 'react-router-dom';
-import { makeStyles, Typography, Button } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
+import ArrowForwardIos from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIos from '@mui/icons-material/ArrowBackIos';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { ArrowBackIos, ArrowForwardIos } from '@material-ui/icons';
 import SeminarioCardSimple from '../SeminarioCardSimple/SeminarioCardSimple';
 import styles from './styles';
 

@@ -1,4 +1,4 @@
-export default theme => ({
+const useStyles = theme => ({
   root: {},
   details: {
     display: 'flex'
@@ -25,3 +25,5 @@ export default theme => ({
     marginRight: theme.spacing(2)
   }
 });
+
+export default useStyles;

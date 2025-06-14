@@ -1,4 +1,4 @@
-export default theme => ({
+const useStyles = theme => ({
   root: {
     padding: theme.spacing(3)
   },
@@ -12,3 +12,5 @@ export default theme => ({
     justifyContent: 'center'
   }
 });
+
+export default useStyles;

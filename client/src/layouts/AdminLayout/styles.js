@@ -1,4 +1,4 @@
-export default theme => ({
+const useStyles = theme => ({
   topbar: {
     position: 'fixed',
     width: '100%',
@@ -39,3 +39,5 @@ export default theme => ({
     }
   }
 });
+
+export default useStyles;

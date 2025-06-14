@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logout } from '../../../../store/actions';
 import classnames from 'classnames';
-import { withStyles, Typography, List, ListItem } from '@material-ui/core';
+import { withStyles } from '@mui/styles';
+import Typography from '@mui/material/Typography';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
 
 // Component styles
 import styles from './styles';

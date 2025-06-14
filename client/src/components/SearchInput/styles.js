@@ -1,4 +1,4 @@
-export default theme => ({
+const useStyles = theme => ({
   root: {
     alignItems: 'center',
     backgroundColor: theme.palette.background.paper,
@@ -22,3 +22,5 @@ export default theme => ({
     letterSpacing: '-0.05px'
   }
 });
+
+export default useStyles;

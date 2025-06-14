@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { withStyles } from '@material-ui/core';
-import { List as ListIcon, Apps as AppsIcon } from '@material-ui/icons';
+import { withStyles } from '@mui/styles';
+import AppsIcon from '@mui/icons-material/Apps';
+import ListIcon from '@mui/icons-material/List';
 import styles from './styles';
 
 const DisplayMode = props => {

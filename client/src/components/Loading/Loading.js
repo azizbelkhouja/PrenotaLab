@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(theme => ({
   root: { background: theme.palette.common.black, height: '100vh' }

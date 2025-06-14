@@ -1,1 +1,1 @@
-export { default } from './TotalCinemas';
+export { default } from './TotalLabs';

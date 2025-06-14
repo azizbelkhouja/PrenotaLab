@@ -1,5 +1,5 @@
 import React from 'react';
-import { Divider, Typography, Link } from '@material-ui/core';
+import { Divider, Typography, Link } from '@mui/material';
 import useStyles from './styles';
 
 export default function Footer() {

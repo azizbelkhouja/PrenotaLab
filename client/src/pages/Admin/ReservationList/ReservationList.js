@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { withStyles, CircularProgress } from '@material-ui/core';
 import styles from './styles';
 import { ReservationsToolbar, ReservationsTable } from './components';
-import { getReservations, getSeminari, getCinemas } from '../../../store/actions';
+import { getReservations, getSeminari, getLabs } from '../../../store/actions';
 import ReservationsCalendar from './components/ReservationsCalendar/ReservationsCalendar';
 import { match } from '../../../utils';
 
@@ -20,15 +20,15 @@ class ReservationList extends Component {
     const {
       reservations,
       seminari,
-      cinemas,
+      labs,
       getReservations,
       getSeminari,
-      getCinemas
+      getLabs
     } = this.props;
 
     if (!reservations.length) getReservations();
     if (!seminari.length) getSeminari();
-    if (!cinemas.length) getCinemas();
+    if (!labs.length) getLabs();
   }
 
   onChangeMode = () =>
@@ -38,7 +38,7 @@ class ReservationList extends Component {
 
   render() {
     const { mode, search } = this.state;
-    const { classes, reservations, seminari, cinemas } = this.props;
+    const { classes, reservations, seminari, labs } = this.props;
 
     const filteredReservations = match(search, reservations, 'phone');
 
@@ -60,13 +60,13 @@ class ReservationList extends Component {
             <ReservationsTable
               reservations={filteredReservations}
               seminari={seminari}
-              cinemas={cinemas}
+              labs={labs}
             />
           ) : (
             <ReservationsCalendar
               reservations={filteredReservations}
               seminari={seminari}
-              cinemas={cinemas}
+              labs={labs}
             />
           )}
         </div>
@@ -75,16 +75,16 @@ class ReservationList extends Component {
   }
 }
 
-const mapStateToProps = ({ reservationState, seminarioState, cinemaState }) => ({
+const mapStateToProps = ({ reservationState, seminarioState, labState }) => ({
   reservations: reservationState.reservations,
   seminarios: seminarioState.seminari,
-  cinemas: cinemaState.cinemas
+  labs: labState.labs
 });
 
 const mapDispatchToProps = {
   getReservations,
   getSeminari,
-  getCinemas
+  getLabs
 };
 export default connect(
   mapStateToProps,

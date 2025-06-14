@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { withStyles, Typography, Select } from '@material-ui/core';
-import { Button, TextField, MenuItem } from '@material-ui/core';
-import {
-  MuiPickersUtilsProvider,
-  KeyboardDatePicker
-} from '@material-ui/pickers';
+import { withStyles } from '@mui/styles';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import MenuItem from '@mui/material/MenuItem';
+import Typography from '@mui/material/Typography';
+import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@mui/pickers';
+
 import MomentUtils from '@date-io/moment';
 import styles from './styles';
 import { seminarCategories, languageData } from '../../../../../data/LabDataService';
@@ -17,6 +18,7 @@ import {
   removeSeminario
 } from '../../../../../store/actions';
 import FileUpload from '../../../../../components/FileUpload/FileUpload';
+import { Select } from '@mui/material';
 
 class AddSeminario extends Component {
   state = {

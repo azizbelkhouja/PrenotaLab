@@ -2,19 +2,21 @@ import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { makeStyles, useTheme } from '@material-ui/styles';
+import { makeStyles, useTheme } from '@mui/styles';
 import {
   Card,
-  CardHeader,
   CardContent,
-  IconButton,
+  CardHeader,
   Divider,
+  IconButton,
   Typography
-} from '@material-ui/core';
-import LaptopMacIcon from '@material-ui/icons/LaptopMac';
-import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
-import RefreshIcon from '@material-ui/icons/Refresh';
-import TabletMacIcon from '@material-ui/icons/TabletMac';
+} from '@mui/material';
+
+import RefreshIcon from '@mui/icons-material/Refresh';
+import LaptopMacIcon from '@mui/icons-material/LaptopMac';
+import TabletMacIcon from '@mui/icons-material/TabletMac';
+import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
+
 
 const useStyles = makeStyles(theme => ({
   root: {

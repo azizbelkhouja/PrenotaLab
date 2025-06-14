@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { withStyles, Typography } from '@material-ui/core';
+import { withStyles } from '@mui/styles';
+import Typography from '@mui/material/Typography';
 import styles from './styles';
 import { AddShowtime, ShowtimesToolbar, ShowtimesTable } from './components';
 import {

@@ -1,4 +1,4 @@
-export default theme => ({
+const useStyles = theme => ({
   movieHero: {
     position: 'relative',
     height: props => (props.height ? props.height : '100%'),
@@ -125,3 +125,5 @@ export default theme => ({
     }
   }
 });
+
+export default useStyles;

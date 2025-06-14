@@ -1,17 +1,15 @@
 import React from 'react';
 import classnames from 'classnames';
-import { Rating } from '@material-ui/lab';
-import {
-  Box,
-  Typography,
-  Button,
-  makeStyles,
-  withStyles
-} from '@material-ui/core';
 import { textTruncate } from '../../../../utils';
 import { Link } from 'react-router-dom';
-import ArrowRightAlt from '@material-ui/icons/ArrowRightAlt';
-import StarBorderIcon from '@material-ui/icons/StarBorder';
+import { makeStyles } from '@mui/styles';
+import { withStyles } from '@mui/styles';
+import Rating from '@mui/material/Rating';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+import ArrowRightAlt from '@mui/icons-material/ArrowRightAlt';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 import styles from './styles';
 
 const useStyles = makeStyles(styles);

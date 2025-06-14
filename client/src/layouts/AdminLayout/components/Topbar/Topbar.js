@@ -3,12 +3,16 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { logout } from '../../../../store/actions';
-import { withStyles } from '@material-ui/core/styles';
-import { Badge, Toolbar, IconButton } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
-import CloseIcon from '@material-ui/icons/Close';
-import NotificationsIcon from '@material-ui/icons/NotificationsOutlined';
-import InputIcon from '@material-ui/icons/Input';
+import { withStyles } from '@mui/styles';
+import {
+  Toolbar,
+  IconButton,
+  Badge
+} from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import InputIcon from '@mui/icons-material/Input';
 
 // Component styles
 import styles from './styles';

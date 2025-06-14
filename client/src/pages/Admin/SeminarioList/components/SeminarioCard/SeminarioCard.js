@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { makeStyles } from '@material-ui/core';
-import { Typography } from '@material-ui/core';
-import { AccessTime as AccessTimeIcon } from '@material-ui/icons';
+import { makeStyles } from '@mui/styles';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import Typography from '@mui/material/Typography';
 import { Paper } from '../../../../../components';
 
 const useStyles = makeStyles(theme => ({

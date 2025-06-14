@@ -1,6 +1,7 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
-import { Grid, Typography } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
+import { Grid, Typography } from '@mui/material';
+
 const useStyles = makeStyles(theme => ({
   movieInfos: {
     background: 'rgba(57, 61, 67, 0.5)',

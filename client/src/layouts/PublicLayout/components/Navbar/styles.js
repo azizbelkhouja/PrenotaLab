@@ -1,4 +1,4 @@
-export default theme => ({
+const useStyles = theme => ({
   navbar: {
     position: 'fixed',
     top: 0,
@@ -220,3 +220,5 @@ export default theme => ({
     navLinks: { display: 'none' }
   }
 });
+
+export default useStyles;

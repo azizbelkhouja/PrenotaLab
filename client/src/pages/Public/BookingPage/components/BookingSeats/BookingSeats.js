@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
-import { makeStyles } from '@material-ui/styles';
-import { Box } from '@material-ui/core';
+import { Box } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+
 const useStyles = makeStyles(theme => ({
   row: {
     display: 'flex',

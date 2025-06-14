@@ -1,1 +1,1 @@
-export { default } from './TotalMovies';
+export { default } from './TotalSeminari';

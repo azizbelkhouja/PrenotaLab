@@ -1,4 +1,4 @@
-export default theme => ({
+const useStyles = theme => ({
   root: {
     backgroundColor: theme.palette.background.default,
     height: '100vh'
@@ -130,3 +130,5 @@ export default theme => ({
     marginTop: theme.spacing(2)
   }
 });
+
+export default useStyles;

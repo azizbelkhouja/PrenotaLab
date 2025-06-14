@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@mui/styles';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { Drawer } from '@material-ui/core';
 import { Footer, Sidebar, Topbar } from './components';
 
 // Component styles
 import styles from './styles';
+import { Drawer } from '@mui/material';
 
 class AdminLayout extends Component {
   constructor(props) {

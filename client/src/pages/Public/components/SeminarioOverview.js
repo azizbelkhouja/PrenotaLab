@@ -1,11 +1,11 @@
 import React from 'react';
+import { makeStyles } from '@mui/styles';
 import {
-  Grid,
-  Typography,
+  Box,
   ButtonBase,
-  makeStyles,
-  Box
-} from '@material-ui/core';
+  Grid,
+  Typography
+} from '@mui/material';
 
 // A style sheet
 const useStyles = makeStyles({

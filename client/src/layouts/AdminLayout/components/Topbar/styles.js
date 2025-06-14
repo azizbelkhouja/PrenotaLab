@@ -1,4 +1,4 @@
-export default theme => ({
+const useStyles = theme => ({
   root: {
     borderBottom: `1px solid ${theme.palette.borderShadow}`,
     boxShadow: `0 0 35px 0  ${theme.palette.borderShadow}`,
@@ -50,3 +50,6 @@ export default theme => ({
     marginLeft: theme.spacing(1)
   }
 });
+
+
+export default useStyles;

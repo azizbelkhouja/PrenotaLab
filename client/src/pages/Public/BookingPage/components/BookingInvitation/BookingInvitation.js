@@ -1,6 +1,12 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
-import { Typography, TextField, Grid, Button, Box } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
+import {
+  Typography,
+  Button,
+  TextField,
+  Grid,
+  Box
+} from '@mui/material';
 import { Paper } from '../../../../../components';
 
 const useStyles = makeStyles(theme => ({

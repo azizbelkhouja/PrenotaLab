@@ -1,4 +1,4 @@
-export default theme => ({
+const useStyles = theme => ({
   container: {
     display: 'flex',
     alignItems: 'baseline'
@@ -45,3 +45,5 @@ export default theme => ({
 
   slider: { '& .slick-slide': { padding: theme.spacing(1) } }
 });
+
+export default useStyles;

@@ -1,4 +1,4 @@
-export default theme => ({
+const useStyles = theme => ({
   root: {
     flexGrow: 0,
     flexShrink: 0,
@@ -23,3 +23,5 @@ export default theme => ({
     backgroundColor: theme.palette.divider
   }
 });
+
+export default useStyles;

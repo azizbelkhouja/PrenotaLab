@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { withStyles } from '@mui/styles';
 import {
-  withStyles,
-  Divider,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
-  ListSubheader
-} from '@material-ui/core';
-import DashboardIcon from '@material-ui/icons/DashboardOutlined';
-import PeopleIcon from '@material-ui/icons/PeopleOutlined';
-import InfoIcon from '@material-ui/icons/InfoOutlined';
-import AccountBoxIcon from '@material-ui/icons/AccountBoxOutlined';
+  ListSubheader,
+  Divider
+} from '@mui/material';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import PeopleIcon from '@mui/icons-material/People';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import InfoIcon from '@mui/icons-material/Info';
+
 // Component styles
 import styles from './styles';
 

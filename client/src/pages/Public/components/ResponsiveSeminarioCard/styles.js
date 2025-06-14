@@ -1,4 +1,4 @@
-export default theme => ({
+const useStyles = theme => ({
   seminarioCard: {
     position: 'relative',
     height: 350,
@@ -113,3 +113,5 @@ export default theme => ({
     }
   }
 });
+
+export default useStyles;

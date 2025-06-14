@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { withStyles } from '@material-ui/core';
-import { Button, IconButton } from '@material-ui/core';
-import { Delete as DeleteIcon } from '@material-ui/icons';
+import { withStyles } from '@mui/styles';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
+
 import styles from './styles';
 
 class ShowtimesToolbar extends Component {

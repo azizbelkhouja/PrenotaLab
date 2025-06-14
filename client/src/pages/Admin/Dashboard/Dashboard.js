@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withStyles, Grid } from '@material-ui/core';
+import { withStyles } from '@mui/styles';
 import {
   TotalUsers,
-  TotalCinemas,
   TotalLabs,
+  TotalSeminari,
   TotalReservations,
   BestLabs,
   UsersByDevice
 } from './components';
 import {
   getUsers,
-  getCinemas,
   getLabs,
-  getReservations
+  getReservations,
+  getSeminari
 } from '../../../store/actions';
+import Grid from '@mui/material/Grid';
 
 const styles = theme => ({
   root: {
@@ -26,8 +27,8 @@ const styles = theme => ({
 class Dashboard extends Component {
   componentDidMount() {
     this.props.getUsers();
-    this.props.getCinemas();
     this.props.getLabs();
+    this.props.getSeminari();
     this.props.getReservations();
   }
 
@@ -58,7 +59,7 @@ class Dashboard extends Component {
   };
 
   render() {
-    const { classes, users, cinemas, labs, reservations } = this.props;
+    const { classes, users, seminari, labs, reservations } = this.props;
 
     return (
       <div className={classes.root}>
@@ -67,7 +68,7 @@ class Dashboard extends Component {
             <TotalUsers users={users.length} />
           </Grid>
           <Grid item lg={3} sm={6} xl={3} xs={12}>
-            <TotalCinemas cinemas={cinemas.length} />
+            <TotalSeminari seminari={seminari.length} />
           </Grid>
           <Grid item lg={3} sm={6} xl={3} xs={12}>
             <TotalLabs labs={labs.length} />
@@ -91,19 +92,19 @@ class Dashboard extends Component {
 
 const mapStateToProps = ({
   userState,
-  cinemaState,
-  movieState,
+  labState,
+  seminarioState,
   reservationState
 }) => ({
   users: userState.users,
-  cinemas: cinemaState.cinemas,
-  movies: movieState.movies,
+  labs: labState.labs,
+  seminari: seminarioState.seminari,
   reservations: reservationState.reservations
 });
 const mapDispatchToProps = {
   getUsers,
-  getCinemas,
   getLabs,
+  getSeminari,
   getReservations
 };
 export default connect(

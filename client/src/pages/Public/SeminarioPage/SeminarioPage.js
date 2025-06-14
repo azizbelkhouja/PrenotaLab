@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import MovieBanner from '../components/MovieBanner/MovieBanner';
+import SeminarioBanner from '../components/SeminarioBanner/SeminarioBanner';
 import { getSeminario, onSelectSeminario } from '../../../store/actions';
 
 class SeminarioPage extends Component {
@@ -16,7 +16,7 @@ class SeminarioPage extends Component {
 
   render() {
     const { seminario } = this.props;
-    return <>{seminario && <MovieBanner seminario={seminario} fullDescription />}</>;
+    return <>{seminario && <SeminarioBanner seminario={seminario} fullDescription />}</>;
   }
 }
 

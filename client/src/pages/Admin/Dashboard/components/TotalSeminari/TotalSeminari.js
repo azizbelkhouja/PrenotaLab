@@ -1,10 +1,14 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/styles';
-import { Card, CardContent, Grid, Typography, Avatar } from '@material-ui/core';
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
-import TheatersIcon from '@material-ui/icons/Theaters';
+import { makeStyles } from '@mui/styles';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Avatar from '@mui/material/Avatar';
+import { TheatersIcon } from '@material-ui/icons/Theaters';
+import { ArrowDownwardIcon } from '@material-ui/icons/ArrowDownward';
 
 const useStyles = makeStyles(theme => ({
   root: {

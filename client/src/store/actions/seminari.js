@@ -22,9 +22,9 @@ export const uploadSeminarioImage = (id, image) => async dispatch => {
   }
 };
 
-export const getMovies = () => async dispatch => {
+export const getSeminari = () => async dispatch => {
   try {
-    const url = '/movies';
+    const url = '/seminari';
     const response = await fetch(url, {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }

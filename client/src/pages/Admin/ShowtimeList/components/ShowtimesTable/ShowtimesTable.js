@@ -2,18 +2,15 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import classNames from 'classnames';
-import { withStyles } from '@material-ui/core';
-import {
-  Checkbox,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-  Typography,
-  TablePagination
-} from '@material-ui/core';
-
+import { withStyles } from '@mui/styles';
+import Checkbox from '@mui/material/Checkbox';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import TablePagination from '@mui/material/TablePagination';
+import Typography from '@mui/material/Typography';
 import { Portlet, PortletContent } from '../../../../../components';
 import styles from './styles';
 

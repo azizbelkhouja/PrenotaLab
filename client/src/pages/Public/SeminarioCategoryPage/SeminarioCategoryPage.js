@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { makeStyles, Grid, Typography } from '@material-ui/core';
-import ResponsiveMovieCard from '../components/ResponsiveMovieCard/ResponsiveMovieCard';
+import ResponsiveSeminarioCard from '../components/ResponsiveSeminarioCard/ResponsiveSeminarioCard';
 import { getSeminari } from '../../../store/actions';
+import { makeStyles } from '@mui/styles';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 
 const useStyles = makeStyles(theme => ({
   title: {
@@ -53,7 +55,7 @@ function SeminarioCategoryPage(props) {
             spacing={2}>
             {seminari.map(seminario => (
               <Grid key={seminario._id} item className={classes.fullWidth}>
-                <ResponsiveMovieCard seminario={seminario} />
+                <ResponsiveSeminarioCard seminario={seminario} />
               </Grid>
             ))}
           </Grid>

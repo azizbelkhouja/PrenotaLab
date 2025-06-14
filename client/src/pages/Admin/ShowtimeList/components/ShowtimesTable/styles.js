@@ -1,4 +1,4 @@
-export default theme => ({
+const useStyles = theme => ({
   root: { color: theme.palette.common.contrastText },
   tableRow: {
     height: '64px'
@@ -25,3 +25,5 @@ export default theme => ({
     cursor: 'pointer'
   }
 });
+
+export default useStyles;

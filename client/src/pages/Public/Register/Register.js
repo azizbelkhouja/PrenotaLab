@@ -3,16 +3,14 @@ import { connect } from 'react-redux';
 import { register } from '../../../store/actions';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core';
-import {
-  Button,
-  Checkbox,
-  Grid,
-  IconButton,
-  TextField,
-  Typography
-} from '@material-ui/core';
-import { ArrowBack as ArrowBackIcon } from '@material-ui/icons';
+import { withStyles } from '@mui/styles';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Checkbox from '@mui/material/Checkbox';
+import IconButton from '@mui/material/IconButton';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import styles from './styles';
 import FileUpload from '../../../components/FileUpload/FileUpload';
 

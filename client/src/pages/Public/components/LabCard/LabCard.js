@@ -1,9 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
-import { makeStyles } from '@material-ui/core';
-import { Typography } from '@material-ui/core';
 import { Paper } from '../../../../components';
-import { EventSeat, AttachMoney } from '@material-ui/icons';
+import { makeStyles } from '@mui/styles';
+import { Typography } from '@mui/material';
+import AttachMoney from '@mui/icons-material/AttachMoney';
+import EventSeat from '@mui/icons-material/EventSeat';
 
 const useStyles = makeStyles(theme => ({
   root: {

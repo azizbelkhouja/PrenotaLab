@@ -1,9 +1,6 @@
 import React from 'react';
-import { Grid, Box, TextField, MenuItem, Typography } from '@material-ui/core';
-import {
-  MuiPickersUtilsProvider,
-  KeyboardDatePicker
-} from '@material-ui/pickers';
+import { Box, Grid, TextField, MenuItem, Typography } from '@mui/material';
+import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@mui/pickers';
 import MomentUtils from '@date-io/moment';
 
 export default function BookingForm(props) {

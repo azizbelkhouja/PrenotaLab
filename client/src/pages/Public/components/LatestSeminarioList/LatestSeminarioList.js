@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core';
-import Container from '@material-ui/core/Container';
-
-import { Grid, GridList, Typography } from '@material-ui/core';
 import styles from './styles';
-import MovieCard from '../../pages/Public/MoviePage/components/MovieCard/MovieCard';
+import SeminarioCard from '../../pages/Public/SeminarioPage/components/SeminarioCard/SeminarioCard';
+import { withStyles } from '@mui/styles';
+import { Container, Grid, Typography, GridList } from '@mui/material';
 
 const LatestSeminarioList = props => {
   const { classes, seminari } = props;
@@ -30,7 +28,7 @@ const LatestSeminarioList = props => {
         <Grid item md={9} xs={12}>
           <GridList className={classes.gridList} cols={2.5}>
             {seminari.map(seminario => (
-              <MovieCard key={seminario._id} movie={seminario} />
+              <SeminarioCard key={seminario._id} movie={seminario} />
             ))}
           </GridList>
         </Grid>

@@ -1,6 +1,6 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
-import { Box, Grid, Typography, Button } from '@material-ui/core';
+import { Box, Grid, Typography, Button } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(theme => ({
   bannerTitle: {

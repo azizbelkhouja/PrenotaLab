@@ -1,4 +1,4 @@
-export default theme => ({
+const useStyles = theme => ({
   card: {
     display: 'flex',
     flex: ' 0 0 auto',
@@ -22,3 +22,5 @@ export default theme => ({
     whiteSpace: 'normal'
   }
 });
+
+export default useStyles;

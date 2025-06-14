@@ -1,4 +1,4 @@
-export default theme => ({
+const useStyles = theme => ({
   container: {
     color: theme.palette.common.white,
     backgroundColor: theme.palette.background.dark
@@ -40,3 +40,5 @@ export default theme => ({
     fullHeight: { height: '100%', paddingTop: theme.spacing(20) }
   }
 });
+
+export default useStyles;

@@ -1,7 +1,6 @@
+import { IconButton, Popover } from '@mui/material';
 import React from 'react';
-import Popover from '@material-ui/core/Popover';
-import IconButton from '@material-ui/core/IconButton';
-import PersonIcon from '@material-ui/icons/Person';
+import PersonIcon from '@mui/icons-material/Person';
 
 export default function UserPopover(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);

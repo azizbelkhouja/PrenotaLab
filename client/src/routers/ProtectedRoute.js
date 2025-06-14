@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Navigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
@@ -17,7 +17,7 @@ const ProtectedRoute = ({
           <Component {...props} />
         </Layout>
       ) : (
-        <Redirect to={{ pathname: '/', state: { from: props.location } }} />
+        <Navigate to={{ pathname: '/', state: { from: props.location } }} />
       )
     }
   />

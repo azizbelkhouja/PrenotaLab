@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, Typography } from '@material-ui/core';
+import { withStyles } from '@mui/styles';
+import Typography from '@mui/material/Typography';
 import styles from './styles';
 import { textTruncate } from '../../../../utils';
 import { Link } from 'react-router-dom';

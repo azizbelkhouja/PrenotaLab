@@ -1,4 +1,4 @@
-export default theme => ({
+const useStyles = theme => ({
   root: {},
   row: {
     height: '42px',
@@ -14,3 +14,5 @@ export default theme => ({
     marginRight: theme.spacing(1)
   }
 });
+
+export default useStyles;

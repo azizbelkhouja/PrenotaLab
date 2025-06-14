@@ -1,7 +1,9 @@
 import React, { Fragment, Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { withStyles, Box, Grid } from '@material-ui/core';
+import { withStyles } from '@mui/styles';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import {
   getSeminari,
   getShowtimes,

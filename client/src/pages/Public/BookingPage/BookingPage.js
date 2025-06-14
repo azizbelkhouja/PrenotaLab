@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { withStyles, Grid, Container } from '@material-ui/core';
+import { withStyles } from '@mui/styles';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
 import {
   getSeminario,
   getLabsUserModeling,

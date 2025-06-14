@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { makeStyles, Grid, Typography } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
+import { Grid, Typography } from '@mui/material';
 
 const useStyles = makeStyles(theme => ({
   title: {

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, Grid } from '@material-ui/core';
-import { IconButton } from '@material-ui/core';
-import { ArrowBack as ArrowBackIcon } from '@material-ui/icons';
+import { withStyles } from '@mui/styles';
+import Grid from '@mui/material/Grid';
+import IconButton from '@mui/material/IconButton';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import LoginForm from './components/LoginForm';
 
 const styles = theme => ({
