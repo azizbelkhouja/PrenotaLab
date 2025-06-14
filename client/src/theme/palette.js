@@ -3,7 +3,7 @@ import { green, red, blue, yellow, blueGrey } from '@mui/material/colors';
 const white = '#FFF';
 const black = '#000';
 
-export default {
+const palette = {
   type: 'light',
   common: {
     black,
@@ -75,3 +75,5 @@ export default {
   pewterBlue: 'rgba(141, 169, 196, 1)',
   isabelline: 'rgba(238, 244, 237, 1)'
 };
+
+export default palette;

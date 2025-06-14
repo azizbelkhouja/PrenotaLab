@@ -1,4 +1,4 @@
-const useStyles = theme => ({
+const styles = theme => ({
   root: {
     backgroundColor: theme.palette.background.default,
     height: '100vh'
@@ -131,4 +131,4 @@ const useStyles = theme => ({
   }
 });
 
-export default useStyles;
+export default styles;

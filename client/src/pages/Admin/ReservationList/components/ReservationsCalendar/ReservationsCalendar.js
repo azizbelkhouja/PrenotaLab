@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import FullCalendar from '@fullcalendar/react';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
-import '@fullcalendar/daygrid/main.css';     // ✅ updated path
-import '@fullcalendar/timegrid/main.css';    // optional but useful
+import dayGridPlugin from '@fullcalendar/daygrid'
+import timeGridPlugin from '@fullcalendar/timegrid'
 
 class ReservationsCalendar extends Component {
   onFindAttr = (id, list, attr) => {

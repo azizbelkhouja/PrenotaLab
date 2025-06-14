@@ -1,4 +1,4 @@
-const useStyles = theme => ({
+const styles = theme => ({
   root: {
     flexGrow: 0,
     flexShrink: 0,
@@ -24,4 +24,4 @@ const useStyles = theme => ({
   }
 });
 
-export default useStyles;
+export default styles;

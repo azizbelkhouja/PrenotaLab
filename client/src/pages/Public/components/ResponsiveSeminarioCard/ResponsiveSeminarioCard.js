@@ -4,9 +4,6 @@ import { withStyles } from '@mui/styles';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import styles from './styles';
-// import ShareIcon from '@material-ui/icons/Share';
-// import FavoriteIcon from '@material-ui/icons/Favorite';
-// import CaledarIcon from '@material-ui/icons/CalendarToday';
 import { textTruncate } from '../../../../utils';
 import { Link } from 'react-router-dom';
 
