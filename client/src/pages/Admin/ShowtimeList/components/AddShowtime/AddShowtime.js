@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
-import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@mui/pickers';
+import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@mui/x-date-pickers';
 import MomentUtils from '@date-io/moment';
 
 import styles from './styles';

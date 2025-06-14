@@ -15,7 +15,7 @@
     "@mui/material": "^7.1.1",
     "@mui/styled-engine-sc": "^7.1.1",
     "@mui/styles": "^6.4.12",
-    "@mui/x-date-pickers": "^8.5.1",
+    "@mui/x-date-pickers": "^8.5.2",
     "@reduxjs/toolkit": "^2.8.2",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
