@@ -2,6 +2,13 @@
   "name": "prenotalab_web",
   "version": "1.0.0",
   "main": "index.js",
+  {
+  "type": "module",
+  "imports": {
+    "dayjs/plugin/isBetween": "./node_modules/dayjs/esm/plugin/isBetween.js",
+    "dayjs/plugin/advancedFormat": "./node_modules/dayjs/esm/plugin/advancedFormat.js"
+  }
+}
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
