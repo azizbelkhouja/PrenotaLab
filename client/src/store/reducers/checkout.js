@@ -41,10 +41,7 @@ const setSelectedSeats = (state, seats) => {
 };
 
 const setSuggestedSeats = (state, seats) => {
-  let newSeats = [];
-
-  newSeats = [...state.suggestedSeat, seats];
-
+  let newSeats = [...state.suggestedSeat, seats];
   return {
     ...state,
     suggestedSeat: newSeats
@@ -55,6 +52,7 @@ const setSelectedLab = (state, selectedLab) => ({
   ...state,
   selectedLab
 });
+
 const setSelectedDate = (state, selectedDate) => ({
   ...state,
   selectedDate
@@ -65,15 +63,13 @@ const setSelectedTime = (state, selectedTime) => ({
   selectedTime
 });
 
-const setInvitation = (state, event) => {
-  return {
-    ...state,
-    invitations: {
-      ...state.invitations,
-      [event.target.name]: event.target.value
-    }
-  };
-};
+const setInvitation = (state, event) => ({
+  ...state,
+  invitations: {
+    ...state.invitations,
+    [event.target.name]: event.target.value
+  }
+});
 
 const setQRCode = (state, QRCode) => ({
   ...state,
@@ -84,13 +80,16 @@ const toggleLoginPopup = state => ({
   ...state,
   showLoginPopup: !state.showLoginPopup
 });
+
 const showInvitationForm = state => ({
   ...state,
   showInvitation: !state.showInvitation
 });
+
 const resetCheckout = () => initialState;
 
-export default function(state = initialState, action) {
+// Named reducer function
+const checkoutReducer = (state = initialState, action) => {
   const { type, payload } = action;
   switch (type) {
     case SET_SELECTED_SEATS:
@@ -116,4 +115,6 @@ export default function(state = initialState, action) {
     default:
       return state;
   }
-}
+};
+
+export default checkoutReducer;

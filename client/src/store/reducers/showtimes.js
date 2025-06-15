@@ -56,12 +56,14 @@ const selectAllShowtimes = state => ({
 
 const deleteShowtime = (state, payload) => ({
   ...state,
+  showtimes: state.showtimes.filter(showtime => showtime._id !== payload),
   selectedShowtimes: state.selectedShowtimes.filter(
     element => element !== payload
   )
 });
 
-export default (state = initialState, action) => {
+// Named reducer function instead of anonymous export
+const showtimesReducer = (state = initialState, action) => {
   const { type, payload } = action;
 
   switch (type) {
@@ -79,3 +81,5 @@ export default (state = initialState, action) => {
       return state;
   }
 };
+
+export default showtimesReducer;

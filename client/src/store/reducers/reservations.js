@@ -15,7 +15,8 @@ const getReservationSuggestedSeats = (state, payload) => ({
   suggestedSeats: payload
 });
 
-export default (state = initialState, action) => {
+// Named reducer function
+const reservationsReducer = (state = initialState, action) => {
   const { type, payload } = action;
 
   switch (type) {
@@ -27,3 +28,5 @@ export default (state = initialState, action) => {
       return state;
   }
 };
+
+export default reservationsReducer;

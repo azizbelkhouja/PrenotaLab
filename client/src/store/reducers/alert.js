@@ -13,13 +13,13 @@ const setAlert = (state, { payload }) => ({
 
 const removeAlert = (state, { payload }) => ({
   ...state,
-  alerts: [...state.alerts].filter(alert => alert.id !== payload),
-  showAlert: false
+  alerts: state.alerts.filter(alert => alert.id !== payload),
+  showAlert: state.alerts.length > 1  // Only hide if no more alerts remain
 });
 
-export default function(state = initialState, action) {
-  const { type } = action;
-  switch (type) {
+// Named reducer function
+const alertsReducer = (state = initialState, action) => {
+  switch (action.type) {
     case SET_ALERT:
       return setAlert(state, action);
     case REMOVE_ALERT:
@@ -27,4 +27,6 @@ export default function(state = initialState, action) {
     default:
       return state;
   }
-}
+};
+
+export default alertsReducer;

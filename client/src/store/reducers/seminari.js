@@ -1,4 +1,4 @@
-import { GET_SEMINARI, SELECT_SEMINARIO,GET_SUGGESTIONS } from '../types';
+import { GET_SEMINARI, SELECT_SEMINARIO, GET_SUGGESTIONS } from '../types';
 
 const initialState = {
   seminari: [],
@@ -40,12 +40,13 @@ const onSelectSeminario = (state, payload) => ({
   selectedSeminario: payload
 });
 
-const getSeminarioSuggestions = (state, payload) =>({
+const getSeminarioSuggestions = (state, payload) => ({
   ...state,
   suggested: payload
-})
+});
 
-export default (state = initialState, action) => {
+// Named reducer function
+const seminariReducer = (state = initialState, action) => {
   const { type, payload } = action;
 
   switch (type) {
@@ -59,3 +60,5 @@ export default (state = initialState, action) => {
       return state;
   }
 };
+
+export default seminariReducer;
